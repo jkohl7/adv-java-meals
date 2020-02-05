@@ -1,6 +1,8 @@
 package edu.wctc;
 
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 public class Main {
 
@@ -57,7 +59,7 @@ public class Main {
                     searchByName();
                     break;
                 case "4":
-                    // doControlBreak();
+                    controlBreak();
                     break;
                 case "5":
                     userContinue = false;
@@ -101,5 +103,69 @@ public class Main {
         System.out.print("Please Enter Value: ");
         String ans = keyboard.nextLine();
         cookbook.printByNameSearch(ans);
+    }
+
+
+
+
+
+    private void controlBreak() throws FileNotFoundException {
+        ArrayList<Meal> list = cookbook.getMeals();
+
+
+
+
+
+        System.out.println("Meal-Type " + " Total " + " Mean " + " Min " + " Max " + " Median");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //        String mealType = null;
+//        int calories = 0;
+//        String mealCalories=String.valueOf(calories);
+//
+//
+//
+//        for (MealType m : MealType.values()) {
+//            while (keyboard.hasNext()){
+//                String next = keyboard.nextLine();
+//                String[] meal = next.split(",");
+//                mealType = meal[0];
+//                mealCalories = meal[1];
+//                String total = meal[2];
+//             //   String
+//
+////                if (mealType.equalsIgnoreCase("");
+////                    calories.add(Integer.parseInt());
+
+
+
+
+
+
+
     }
 }
