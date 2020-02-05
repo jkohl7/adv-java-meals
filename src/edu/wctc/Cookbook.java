@@ -1,9 +1,12 @@
 package edu.wctc;
 
+import java.util.ArrayList;
+
 public class Cookbook {
 
     // Hold all the meals that are read in from the file
     private Meal[] meals = new Meal[100];
+
     // Hold the next (empty) index in the array
     private int i = 0;
 
@@ -46,9 +49,11 @@ public class Cookbook {
         }
     }
 
-    public Meal[] getMeals() {
-        return meals;
-    }
+
+    //Replaced the array of Meal in Cookbook.java with an ArrayList.
+    public ArrayList<Meal> getMeals = new ArrayList<Meal>(100);
+    //public Meal[] getMeals() {return meals;}
+
 
     public void printAllMeals() {
         for (Meal item : meals) {
@@ -70,7 +75,7 @@ public class Cookbook {
         // Maybe add a message if no match found?
         for (Meal item : meals) {
             // Maybe make this case-insensitive?
-            if (item != null && item.getItem().indexOf(s) >= 0) {
+            if (item != null && item.getItem().contains(s)) {
                 System.out.println(item);
             }
         }
